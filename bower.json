@@ -1,12 +1,25 @@
 {
   "name": "badge.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/badge.min.js",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test"
+    "test",
+    "tests"
   ],
-  "dependencies": {}
+  "homepage": "https://github.com/PavlikPolivka/badge.js",
+  "authors": [
+    "PavlikPolivka <polivka.pavel@gmail.com>"
+  ],
+  "description": "Simple library for browser favicon manipulations. Badges !!!!",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "favicon",
+    "badge"
+  ],
+  "license": "MIT"
 }

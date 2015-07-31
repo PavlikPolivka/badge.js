@@ -1,20 +1,13 @@
-/* Styles for badge.js demo
- *
- * Author: Pavel Polivka
- */
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
 
-/* === resets === */
-
-/* === defaults === */
-
-/* === generic styles */
-
-/* === layout === */
-
-/* === modules === */
-
-/* === specific styles */
-
-/* === subsections === */
-
-/* === hacks / overrides === */
+.demoNumber {
+  width: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+}

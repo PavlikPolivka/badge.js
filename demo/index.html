@@ -1,35 +1,97 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>badge.js demo</title>
-    <link rel="stylesheet" href="./assets/normalize.css" />
+    <title>Badge.js demo</title>
     <link rel="stylesheet" href="./assets/main.css" />
-    <style>
-      /* begin demo embedded styles */
-
-      /* end demo embedded styles */
-    </style>
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/idea.css" />
   </head>
   <body>
-    <h1>badge.js demo</h1>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Badge.js</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
-    <!-- begin demo markup -->
+    <div class="container">
 
-    <!-- end demo markup -->
+      <div class="starter-template">
+        <h1>Badge.js demo</h1>
+        <p class="lead">Simple library for browser favicon manipulations. Badges !!!!</p>
+        <p class="lead">See the <a href="http://PavlikPolivka.github.io/badge.js">project homepage</a>.
+        <p class="lead">Check out the <a href="https://github.com/PavlikPolivka/badge.js">project repo</a>.
 
-    <p>See the <a href="http://PavlikPolivka.github.io/badge.js">project homepage</a>.
-    <p>Check out the <a href="https://github.com/PavlikPolivka/badge.js">project repo</a>.
-    <p>Copyright 2015 Pavel Polivka</p>
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Square</h2>
+            <div><input type="number" class="demoNumber" id="squareNumber" value="1"></div>
+            <button class="btn btn-default" onclick="updateSquare();">Update</button>
+          </div>
+          <div class="col-md-6">
+            <h2>Circle</h2>
+            <div><input type="number" class="demoNumber" id="circleNumber" value="1"></div>
+            <button class="btn btn-default"  onclick="updateCircle();">Update</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <pre>
+            <code class="javascript">
+              var squareBadge = badge();
+
+              var circleBadge = badge({
+                shape : 'circle',
+                color : "#9370DB",
+                font : "Helvetica",
+                fontColor : "#AFEEEE"
+              });
+
+              squareBadge.update(6);
+              circleBadge.update(666);
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-3"></div>
+     </div>
+
+    </div>
 
     <script src="./../dist/badge.js"></script>
+    <script src="./assets/highlight.pack.js"></script>
 
     <script>
-      /* begin demo script */
+      hljs.initHighlightingOnLoad();
 
-      var n = badge();
-      console.log(n);
+      var square = badge();
 
-      /* end demo script */
+      var circle = badge({
+        shape : 'circle',
+        color : "#9370DB",
+        fontColor : "#AFEEEE"
+      });
+
+      function updateSquare() {
+          square.update(document.getElementById("squareNumber").value);
+      }
+
+      function updateCircle() {
+          circle.update(document.getElementById("circleNumber").value);
+      }
     </script>
   </body>
 </html>
