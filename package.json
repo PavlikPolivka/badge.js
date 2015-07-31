@@ -1,6 +1,6 @@
 {
   "name": "badge.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/badge.min.js",
   "description": "Simple library for browser favicon manipulations. Badges !!!!",
   "repository": {

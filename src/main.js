@@ -122,7 +122,7 @@ var badge = function(userOptions) {
 
 
 // Version.
-badge.VERSION = '0.0.0';
+badge.VERSION = '0.1.0';
 
 
 // Export to the root, which is probably `window`.
